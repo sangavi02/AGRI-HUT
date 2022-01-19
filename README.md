@@ -18,9 +18,9 @@
  
 •  By using javascript, following pages are developed,
 
-     📍 Cart page
-
      📍 Soil test
 
-     📍 Registration form validation
+     📍 Cart page
+
+     📍 Payment page
 
