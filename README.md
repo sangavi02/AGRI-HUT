@@ -1,9 +1,9 @@
 👨‍🌾 AGRI-HUT
 
- •  AGRI HUT is used to develop organic forming which gives more information and updates about organic forming.
-    The main aim of this website is to buy the correct fertilizers by testing the soils here. 
-
- • This web page is about organic forming.It represents the ,
+ •  Organic Agriculture is a production system that sustains the health of soils, ecosystems, and people.AGRI HUT is used to enhance the organic farming by providing information and updates about farming.The main purpose of this website is to make farmers to use appropriate fertilizers by testing the soils here.
+ 
+ 
+•  This web page is splited up into many categories such as,
 
      📍 History of organic farming
 
@@ -15,7 +15,8 @@
 
      📍 Registration for further updates of the website
 
- • By using javascript, following pages are developed
+ 
+•  By using javascript, following pages are developed,
 
      📍 Cart page
 
