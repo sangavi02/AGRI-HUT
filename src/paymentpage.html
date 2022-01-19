@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>regiter</title>
+<style>
+tr{
+algin:left-side;
+font-size:45;
+}
+td{
+font-size:20;
+text-transform:upper-alpha;
+}
+h1{
+font-size:45;
+color:darkorange;
+}
+.float1-img{
+float:right;
+margin-right:80px;
+margin-left:10px;
+margin-bottom:5px;
+border:3px;
+padding:2px;
+}
+input[type=text], select {
+  width:20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing:border-box;
+}
+
+input[type=button] {
+  width:20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+<script>
+function check()
+{
+var name=document.getElementById("name");
+var cardname=document.getElementById("cardname");
+var cardnum=document.getElementById("cardnum");
+var exmon=document.getElementById("exmon");
+var exyear=document.getElementById("exyear");
+var cvvnum=document.getElementById("cvvnum");
+var fname=document.getElementById("fname");
+var lname=document.getElementById("lname");
+var address=document.getElementById("address");
+var pnum=document.getElementById("pnum");
+var email=document.getElementById("email");
+
+if(fname.value=="")
+{
+alert("please enter the frist name");
+return false;
+}
+if(lname.value=="")
+{
+alert("please enter the last name");
+return false;
+}
+if(address.value=="")
+{
+alert("please enter the address");
+return false;
+}
+if(pnum.value=="")
+{
+alert("please enter the phone number");
+return false;
+}
+if(email.value=="")
+{
+alert("please enter the email ID");
+return false;
+}
+if(name.value=="")
+{
+alert("please enter the holder name");
+return false;
+}
+if(cardname.value=="")
+{
+alert("please enter the card name");
+return false;
+}
+if(cardnum.value=="")
+{
+alert("please enter the card number");
+return false;
+}
+if(exmon.value=="")
+{
+alert("please enter the expiry month");
+return false;
+}
+if(exyear.value=="")
+{
+alert("please enter the expiry year");
+return false;
+}
+if(cvvnum.value=="")
+{
+alert("please enter the cvv number");
+return false;
+}
+
+alert("PAYMENT WAS SUCCESSFULL.THE PRODUCT WILL DELIVERED WITHIN THREE WORKING DAYS :)");
+}
+</script>
+</head>
+<body bgcolor="#90EE90	">
+<CENTER>
+<h1>PAYMENT </H1>
+<table border="5" cellpadding="5" cellspacing="2" width="40%" height="50%">
+<h3>CUSTOMER DETAILS</h3>
+<tr>
+<td>
+<form method="post" onsubmit="check();">
+      <label for="fname">Frist Name</label><input type="text"id="fname">
+	  <label for="lname">Last Name</label><input type="text"id="lname">
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <label for="address">Address</label>
+<textarea id="address" rows="4" cols="50"></textarea>
+  </td>
+  </tr>
+  <tr>
+  <br>
+  <td>
+    <label for="pnum">Phone number</label>
+    <input type="text" id="pnum" max="10"><br>
+  </td>
+  </tr>
+  <tr>
+   <td>
+ 
+    <label for="email">Email Id</label>
+    <input id="email" type="text" min="8"><br>
+  </td>
+</tr>
+</table>
+<h3>CARD DETAILS</h3>
+<table  border="5" cellpadding="5" cellspacing="2" width="40%" height="50%">
+<tr>
+<td>
+      <label for="name">Holder Name</label>
+      <input type="text"id="name"><img src="C:\Users\SANGAVI\Documents\AGRI HUT\images\pay1.jpg" width="25%" height="10%" class="float1-img">
+  </td>
+  </tr>
+<tr>
+  <td>
+    <label for="cardname">Card Name</label>
+    <input type="text" id="cardname">
+    <label for="cardnum">Card Number</label>
+    <input id="cardnum" type="text"><br>
+  </td>
+  </tr>
+  
+<tr>
+  <td>
+
+    <label for="exmon">Expiry Month</label>
+    <input type="text"  id="exmon">
+    <label for="exyear">Expiry year</label>
+    <input type="text"  id="exyear"><br><br>
+    
+   </td>
+ </tr>
+  <tr>
+ <td>
+  
+    <label for="cvvnum">CVV Number</label>
+    <input type="text" id="cvvnum"><br>
+  </td>
+</tr>
+</form>
+</table>
+ </center>
+  <center>
+     <br><br><input type="button" value="PAY NOW" onclick="check()"><br><br>
+  </center>
+</body>
+</html> 

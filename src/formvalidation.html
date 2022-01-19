@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>regiter</title>
+<style>
+tr{
+algin:left-side;
+font-size:100%;
+}
+td{
+font-size:100%;
+color:brown;
+}
+h1{
+font-size:45;
+color:#DEB887;
+}
+</style>
+<script>
+function check()
+{
+var name=document.getElementById("name");
+var age=document.getElementById("age");
+var state=document.getElementById("state");
+var district=document.getElementById("district");
+var pcode=document.getElementById("pcode");
+var email=document.getElementById("email");
+var phone=document.getElementById("phone");
+
+if(name.value=="")
+{
+alert("please enter the name");
+return false;
+}
+if(age.value=="")
+{
+alert("please enter the age");
+return false;
+}
+if(state.value=="")
+{
+alert("please enter the state");
+return false;
+}
+if(district.value=="")
+{
+alert("please enter the district");
+return false;
+}
+if(pcode.value=="")
+{
+alert("please enter the pincode");
+return false;
+}
+if(email.value=="")
+{
+alert("please enter the email");
+return false;
+}
+if(phone.value=="")
+{
+alert("please enter the phone number ");
+return false;
+}
+
+alert("registration was successfull :)");
+}
+</script>
+</head>
+<body background="C:\Users\SANGAVI\Documents\SOIL HUT\images\tree.png">
+<CENTER><h1>REGISTRATION </H1></center>
+<table  border="5"  cellspacing="10" cellpadding="9" width="40%" height="85%" align="center" bgcolor="#DEB887"> 
+<tr>
+<td>
+<form method="post" onsubmit="check();">
+      <label for="name">Name</label>
+      <input type="text"id="name"><br>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <label for="age">Age</label>
+    <input type="number" id="age"><br>
+  </td>
+  </tr>
+  <tr>
+  <td>
+
+    <label for="state">State</label>
+    <input type="text"  id="state"><br><br>
+    <label for="district">District</label>
+    <input type="text"  id="district"><br><br>
+    <label for="pcode">Pin-code</label>
+    <input type="number"  id="pcode"><br><br>
+   </td>
+   </tr>
+   <tr>
+   <td>
+    Gender
+   
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female"><br>
+ </td>
+ </tr>
+   <tr>
+   <td>
+ 
+    <label for="email">E-mail</label>
+    <input id="email" type="email" name="email"><br>
+  </td>
+ </tr>
+  
+ <tr>
+ <td>
+  
+    <label for="phone">Phone number</label>
+    <input type="tel" name="phone" id="phone"><br>
+  </td>
+ </tr>
+ <tr> 
+ <td>
+ <center><br>
+   <button type="reset">RESET</button>
+  <button type="submit">SUBMIT</button>
+  <br><BR>
+  </center>
+</form>
+</td>
+</tr>
+</table>
+</body>
+</html>

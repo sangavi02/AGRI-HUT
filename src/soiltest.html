@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>CALCULATIONS</title>
+<style>
+input[type=text], select {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing:border-box;
+}
+
+input[type=button] {
+  width:15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size:1em;
+}
+ 
+.btn-primary {
+    width:25%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+a {
+
+  text-decoration: none;
+ 
+}
+</style>
+</head>
+<body bgcolor="orange">
+<center>
+<br><hr>
+<h1>SOIL TEST FOR FERTILIZERS</h1>
+ <hr><br>
+ <br><h3>ENTER THE VALUES TO TEST YOUR SOIL..</h3><br>
+<form name="formcal">
+<label for="mg">Mg</label>
+<input type="text" name="mg" placeholder="enter">
+<label for="ca">Ca</label>
+<input type="text" name="ca" placeholder="enter">
+<label for="ir">Zn</label>
+<input type="text" name="ir" placeholder="enter">
+<label for="cu">Cu</label>
+<input type="text" name="cu" placeholder="enter"><br><br>
+<label for="po">P2O5</label>
+<input type="text" name="po" placeholder="enter">
+<label for="ko">K2O5</label>
+<input type="text" name="ko" placeholder="enter">
+<label for="s"> S</label>
+<input type="text" name="s" placeholder="enter"><br><br>
+
+ <br><br><input type="button" value="calculate" onclick="calculate()"><br><br>
+ <br>
+     
+  <input type="text" value="SOIL TEST RESULT">
+  <input type="text" name="level"><br><br>
+  
+  <input type="text" value="EXPECTED YEILD">
+  <input type="text" name="yield"><br><br>
+  
+  
+  <input type="text" value="SAMPLE TO BE IMPROVED">
+  <input type="text" id="message"><br><br>
+  
+  <input type="text" value="FERTILIZERS">
+  <input type="text" name="si"><br><br>
+  
+  <a href="soild.html"><button class="btn btn-primary btn-purchase" type="button">PURCHASE THE FERTILIZER</button></a>
+
+  <br>
+</center>
+</form>
+<script type="text/javascript">
+       
+function calculate()
+{
+var n1,n2,n3,n4,n5,n6,re,pe;
+n1=Number(document.formcal.mg.value);
+n2=Number(document.formcal.ca.value);
+n3=Number(document.formcal.ir.value);
+n4=Number(document.formcal.cu.value);
+n5=Number(document.formcal.po.value);
+n6=Number(document.formcal.ko.value);
+n7=Number(document.formcal.s.value);
+re=n1+n2+n3+n4+n5+n6+n7;
+pe=re/7;
+
+
+
+if(pe<100)
+{
+document.formcal.yield.value="70%-100%";
+document.formcal.level.value="ABOVE OPTIMUM";
+}
+if(pe<95)
+{
+document.formcal.yield.value="80%-95%";
+document.formcal.level.value="OPTIMUM";
+}
+if(pe<85)
+{
+document.formcal.yield.value="75%-85%";
+document.formcal.level.value="MEDIUM";
+}
+if(pe<66)
+{
+document.formcal.yield.value="65%-75%";
+document.formcal.level.value="LOW";
+}
+
+ var m=0;
+ var a=[n1,n2,n3,n4,n5,n6,n7];
+ var mini=a[0];
+ for(var i=1;i<a.length;i++)
+ {
+	 if(a[i]<mini)
+	 {
+		 mini=a[i]
+		  m=i
+		 
+		 }
+ }
+ 
+ 
+ if(m==0)
+ {
+  document.formcal.message.value="Mg";
+  document.formcal.si.value="VERMIGCOMPOST";
+ }
+  if(m==1)
+ {
+  document.formcal.message.value="Ca";
+  document.formcal.si.value="GREEN CARE";
+ }
+  if(m==2)
+ {
+  document.formcal.message.value="Zn";
+  document.formcal.si.value="BIO GRO";
+ }
+  if(m==3)
+ {
+  document.formcal.message.value="Cu";
+  document.formcal.si.value="AL-SLACH";
+ }
+  if(m==4)
+ {
+  document.formcal.message.value="P2O5";
+  document.formcal.si.value="GROWTH PLUS";
+ }
+  if(m==5)
+ {
+  document.formcal.message.value="K2O5";
+  document.formcal.si.value="GREEN STIX";
+ }
+  if(m==6)
+ {
+  document.formcal.message.value="S";
+  document.formcal.si.value="VERMIGCOMPOST";
+ }
+}
+</script>
+</body>
+</html>
